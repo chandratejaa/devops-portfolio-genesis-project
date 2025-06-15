@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Server, Cloud, Code, Settings, Database, Monitor } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -85,17 +84,17 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-cyan-900">
       {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+      <header className="bg-gradient-to-r from-slate-800/90 to-purple-800/90 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <nav className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-slate-800">Chandra Teja Reddy</h1>
-            <div className="flex space-x-6">
-              <a href="#about" className="text-slate-600 hover:text-slate-800 transition-colors">About</a>
-              <a href="#skills" className="text-slate-600 hover:text-slate-800 transition-colors">Skills</a>
-              <a href="#projects" className="text-slate-600 hover:text-slate-800 transition-colors">Projects</a>
-              <a href="#contact" className="text-slate-600 hover:text-slate-800 transition-colors">Contact</a>
+            <h1 className="text-2xl font-bold font-orbitron text-cyan-300">Chandra Teja Reddy</h1>
+            <div className="flex space-x-6 font-rajdhani">
+              <a href="#about" className="text-slate-300 hover:text-cyan-300 transition-colors">About</a>
+              <a href="#skills" className="text-slate-300 hover:text-cyan-300 transition-colors">Skills</a>
+              <a href="#projects" className="text-slate-300 hover:text-cyan-300 transition-colors">Projects</a>
+              <a href="#contact" className="text-slate-300 hover:text-cyan-300 transition-colors">Contact</a>
             </div>
           </nav>
         </div>
@@ -105,20 +104,20 @@ const Index = () => {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
-            <h1 className="text-5xl font-bold text-slate-800 mb-6">
+            <h1 className="text-5xl font-bold font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
               DevOps Engineer & Cloud Specialist
             </h1>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl font-exo text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Passionate about automating infrastructure, optimizing CI/CD pipelines, and building scalable cloud solutions. 
               Experienced in AWS, Azure, Docker, Kubernetes, and Infrastructure as Code.
             </p>
           </div>
           <div className="flex justify-center space-x-4">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 font-rajdhani font-semibold">
               <Mail className="w-4 h-4 mr-2" />
               Get In Touch
             </Button>
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="outline" className="border-cyan-400 text-cyan-300 hover:bg-cyan-400/10 font-rajdhani font-semibold">
               <ExternalLink className="w-4 h-4 mr-2" />
               View Projects
             </Button>
@@ -127,51 +126,51 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6 bg-white">
+      <section id="about" className="py-20 px-6 bg-gradient-to-r from-slate-800/50 to-purple-800/50 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">About Me</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">About Me</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+            <div className="font-exo">
+              <p className="text-lg text-slate-300 leading-relaxed mb-6">
                 I'm a dedicated DevOps engineer with expertise in cloud infrastructure, automation, and continuous integration/deployment. 
                 My passion lies in bridging the gap between development and operations teams through efficient tooling and processes.
               </p>
-              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+              <p className="text-lg text-slate-300 leading-relaxed mb-6">
                 With hands-on experience in AWS, Azure, Docker, Kubernetes, and various automation tools, I focus on creating 
                 robust, scalable, and secure infrastructure solutions that enable teams to deliver software faster and more reliably.
               </p>
               <div className="flex space-x-4">
-                <Badge variant="secondary" className="px-3 py-1">
+                <Badge variant="secondary" className="px-3 py-1 bg-cyan-500/20 text-cyan-300 border-cyan-500/30">
                   <Monitor className="w-4 h-4 mr-1" />
                   Infrastructure
                 </Badge>
-                <Badge variant="secondary" className="px-3 py-1">
+                <Badge variant="secondary" className="px-3 py-1 bg-purple-500/20 text-purple-300 border-purple-500/30">
                   <Code className="w-4 h-4 mr-1" />
                   Automation
                 </Badge>
-                <Badge variant="secondary" className="px-3 py-1">
+                <Badge variant="secondary" className="px-3 py-1 bg-pink-500/20 text-pink-300 border-pink-500/30">
                   <Cloud className="w-4 h-4 mr-1" />
                   Cloud Native
                 </Badge>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4 text-slate-800">Quick Facts</h3>
-              <ul className="space-y-3 text-slate-600">
+            <div className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 p-8 rounded-lg border border-cyan-500/20 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold mb-4 font-rajdhani text-cyan-300">Quick Facts</h3>
+              <ul className="space-y-3 text-slate-300 font-exo">
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                   Experienced in Linux system administration
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                   Proficient in CI/CD pipeline automation
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
                   Skilled in containerization and orchestration
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                   Cloud infrastructure design and management
                 </li>
               </ul>
@@ -183,17 +182,17 @@ const Index = () => {
       {/* Skills Section */}
       <section id="skills" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Technical Skills</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Technical Skills</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {Object.entries(skills).map(([category, skillList], index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 bg-gradient-to-br from-slate-800/50 to-purple-800/30 border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/40">
                 <CardHeader>
-                  <CardTitle className="text-lg text-slate-800">{category}</CardTitle>
+                  <CardTitle className="text-lg font-rajdhani text-cyan-300">{category}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {skillList.map((skill, skillIndex) => (
-                      <Badge key={skillIndex} variant="outline" className="text-sm">
+                      <Badge key={skillIndex} variant="outline" className="text-sm font-exo bg-purple-500/10 text-purple-300 border-purple-500/30 hover:bg-purple-500/20">
                         {skill}
                       </Badge>
                     ))}
@@ -206,42 +205,42 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 bg-white">
+      <section id="projects" className="py-20 px-6 bg-gradient-to-r from-slate-800/50 to-purple-800/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Featured Projects</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Featured Projects</h2>
           <div className="grid lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 bg-gradient-to-br from-slate-800/50 to-purple-800/30 border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/40">
                 <CardHeader>
                   <div className="flex items-center mb-3">
-                    <div className="p-2 bg-blue-100 rounded-lg mr-3">
+                    <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg mr-3 border border-cyan-500/30">
                       {project.icon}
                     </div>
-                    <CardTitle className="text-xl text-slate-800">{project.title}</CardTitle>
+                    <CardTitle className="text-xl font-rajdhani text-cyan-300">{project.title}</CardTitle>
                   </div>
-                  <CardDescription className="text-slate-600 leading-relaxed">
+                  <CardDescription className="text-slate-300 leading-relaxed font-exo">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-slate-700 mb-2">Technologies Used:</h4>
+                      <h4 className="font-semibold text-purple-300 mb-2 font-rajdhani">Technologies Used:</h4>
                       <div className="flex flex-wrap gap-1">
                         {project.technologies.map((tech, techIndex) => (
-                          <Badge key={techIndex} variant="secondary" className="text-xs">
+                          <Badge key={techIndex} variant="secondary" className="text-xs font-exo bg-cyan-500/20 text-cyan-300 border-cyan-500/30">
                             {tech}
                           </Badge>
                         ))}
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-700 mb-1">Key Challenge:</h4>
-                      <p className="text-sm text-slate-600">{project.challenges}</p>
+                      <h4 className="font-semibold text-purple-300 mb-1 font-rajdhani">Key Challenge:</h4>
+                      <p className="text-sm text-slate-300 font-exo">{project.challenges}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-700 mb-1">Outcome:</h4>
-                      <p className="text-sm text-slate-600">{project.outcomes}</p>
+                      <h4 className="font-semibold text-purple-300 mb-1 font-rajdhani">Outcome:</h4>
+                      <p className="text-sm text-slate-300 font-exo">{project.outcomes}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -254,37 +253,37 @@ const Index = () => {
       {/* Certifications Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Certifications & Learning</h2>
-          <Card className="bg-gradient-to-r from-blue-50 to-indigo-50">
+          <h2 className="text-3xl font-bold text-center mb-12 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Certifications & Learning</h2>
+          <Card className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 border-cyan-500/20 backdrop-blur-sm">
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-slate-800">Current Certifications</h3>
+                  <h3 className="text-xl font-semibold mb-4 font-rajdhani text-cyan-300">Current Certifications</h3>
                   <ul className="space-y-3">
                     {certifications.map((cert, index) => (
-                      <li key={index} className="flex items-center text-slate-600">
-                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                      <li key={index} className="flex items-center text-slate-300 font-exo">
+                        <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
                         {cert}
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-slate-800">Platforms & Tools</h3>
+                  <h3 className="text-xl font-semibold mb-4 font-rajdhani text-cyan-300">Platforms & Tools</h3>
                   <div className="grid grid-cols-2 gap-3">
-                    <Badge className="justify-center py-2 bg-orange-100 text-orange-800 hover:bg-orange-200">
+                    <Badge className="justify-center py-2 bg-orange-500/20 text-orange-300 hover:bg-orange-500/30 border-orange-500/30 font-exo">
                       <Database className="w-4 h-4 mr-1" />
                       AWS
                     </Badge>
-                    <Badge className="justify-center py-2 bg-blue-100 text-blue-800 hover:bg-blue-200">
+                    <Badge className="justify-center py-2 bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 border-blue-500/30 font-exo">
                       <Cloud className="w-4 h-4 mr-1" />
                       Azure
                     </Badge>
-                    <Badge className="justify-center py-2 bg-purple-100 text-purple-800 hover:bg-purple-200">
+                    <Badge className="justify-center py-2 bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 border-purple-500/30 font-exo">
                       <Server className="w-4 h-4 mr-1" />
                       Linux
                     </Badge>
-                    <Badge className="justify-center py-2 bg-green-100 text-green-800 hover:bg-green-200">
+                    <Badge className="justify-center py-2 bg-green-500/20 text-green-300 hover:bg-green-500/30 border-green-500/30 font-exo">
                       <Settings className="w-4 h-4 mr-1" />
                       Docker
                     </Badge>
@@ -297,49 +296,49 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 bg-slate-800 text-white">
+      <section id="contact" className="py-20 px-6 bg-gradient-to-r from-slate-900 via-purple-900 to-cyan-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
-          <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Get In Touch</h2>
+          <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-exo">
             I'm always interested in discussing DevOps opportunities, cloud infrastructure projects, or collaborating on innovative solutions.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <a 
               href="mailto:chandu419419@gmail.com"
-              className="flex flex-col items-center p-6 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors"
+              className="flex flex-col items-center p-6 bg-gradient-to-br from-slate-800/50 to-purple-800/30 rounded-lg hover:from-slate-700/50 hover:to-purple-700/30 transition-all duration-300 border border-cyan-500/20 hover:border-cyan-400/40 backdrop-blur-sm"
             >
-              <Mail className="w-8 h-8 mb-4 text-blue-400" />
-              <h3 className="text-lg font-semibold mb-2">Email</h3>
-              <p className="text-slate-300">chandu419419@gmail.com</p>
+              <Mail className="w-8 h-8 mb-4 text-cyan-400" />
+              <h3 className="text-lg font-semibold mb-2 font-rajdhani text-cyan-300">Email</h3>
+              <p className="text-slate-300 font-exo">chandu419419@gmail.com</p>
             </a>
             <a 
               href="https://www.linkedin.com/in/chandra-teja-reddy-0666a0331?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center p-6 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors"
+              className="flex flex-col items-center p-6 bg-gradient-to-br from-slate-800/50 to-purple-800/30 rounded-lg hover:from-slate-700/50 hover:to-purple-700/30 transition-all duration-300 border border-cyan-500/20 hover:border-cyan-400/40 backdrop-blur-sm"
             >
-              <Linkedin className="w-8 h-8 mb-4 text-blue-400" />
-              <h3 className="text-lg font-semibold mb-2">LinkedIn</h3>
-              <p className="text-slate-300">Connect with me</p>
+              <Linkedin className="w-8 h-8 mb-4 text-purple-400" />
+              <h3 className="text-lg font-semibold mb-2 font-rajdhani text-purple-300">LinkedIn</h3>
+              <p className="text-slate-300 font-exo">Connect with me</p>
             </a>
             <a 
               href="https://github.com/chandratejaa"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center p-6 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors"
+              className="flex flex-col items-center p-6 bg-gradient-to-br from-slate-800/50 to-purple-800/30 rounded-lg hover:from-slate-700/50 hover:to-purple-700/30 transition-all duration-300 border border-cyan-500/20 hover:border-cyan-400/40 backdrop-blur-sm"
             >
-              <Github className="w-8 h-8 mb-4 text-blue-400" />
-              <h3 className="text-lg font-semibold mb-2">GitHub</h3>
-              <p className="text-slate-300">@chandratejaa</p>
+              <Github className="w-8 h-8 mb-4 text-pink-400" />
+              <h3 className="text-lg font-semibold mb-2 font-rajdhani text-pink-300">GitHub</h3>
+              <p className="text-slate-300 font-exo">@chandratejaa</p>
             </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-8 px-6">
+      <footer className="bg-slate-900/80 backdrop-blur-sm text-slate-400 py-8 px-6 border-t border-cyan-500/20">
         <div className="max-w-6xl mx-auto text-center">
-          <p>&copy; 2024 Chandra Teja Reddy. Built with React and Tailwind CSS.</p>
+          <p className="font-exo">&copy; 2024 Chandra Teja Reddy. Built with React and Tailwind CSS.</p>
         </div>
       </footer>
     </div>
