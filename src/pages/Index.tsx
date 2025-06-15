@@ -85,7 +85,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-violet-900 to-fuchsia-900">
+    <div className="min-h-screen bg-gradient-to-br from-[#03001e] via-[#10002b] to-[#2f0f5d]">
       {/* Header */}
       <header className="bg-gradient-to-r from-indigo-800/90 to-violet-800/90 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-emerald-400/20">
         <div className="max-w-6xl mx-auto px-6 py-4">
@@ -181,19 +181,33 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-6">
+      <section
+        id="skills"
+        className="py-20 px-6 bg-gradient-to-br from-[#1618a5]/90 via-[#19e6e6]/30 to-[#03dac6]/70"
+      >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-violet-400">Technical Skills</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-[#fff900] via-[#0ff0fc] to-[#18f005] drop-shadow-lg">
+            Technical Skills
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {Object.entries(skills).map(([category, skillList], index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 bg-gradient-to-br from-indigo-800/50 to-violet-800/30 border-emerald-500/20 backdrop-blur-sm hover:border-emerald-400/40">
+              <Card
+                key={index}
+                className="hover:shadow-xl transition-shadow duration-300 bg-[#1a223f]/80 border-[#1afbf0]/50 backdrop-blur-md hover:border-[#ff6ac1]/50"
+              >
                 <CardHeader>
-                  <CardTitle className="text-lg font-rajdhani text-emerald-300">{category}</CardTitle>
+                  <CardTitle className="text-lg font-rajdhani text-[#0ff0fc]">
+                    {category}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {skillList.map((skill, skillIndex) => (
-                      <Badge key={skillIndex} variant="outline" className="text-sm font-exo bg-violet-500/10 text-violet-300 border-violet-500/30 hover:bg-violet-500/20">
+                      <Badge
+                        key={skillIndex}
+                        variant="outline"
+                        className="text-sm font-exo bg-[#00dfd8]/30 text-[#fff900] border-[#19e6e6]/50 hover:bg-[#ff6ac1]/20"
+                      >
                         {skill}
                       </Badge>
                     ))}
@@ -206,42 +220,60 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 bg-gradient-to-r from-indigo-800/50 to-violet-800/50 backdrop-blur-sm">
+      <section
+        id="projects"
+        className="py-20 px-6 bg-gradient-to-br from-[#2b0047]/95 via-[#ff6ac1]/10 to-[#232526]/90"
+      >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-violet-400">Featured Projects</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 font-rajdhani text-transparent bg-clip-text bg-gradient-to-r from-[#e0c3fc] via-[#ff6ac1] to-[#43e97b] drop-shadow-lg">
+            Featured Projects
+          </h2>
           <div className="grid lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 bg-gradient-to-br from-indigo-800/50 to-violet-800/30 border-emerald-500/20 backdrop-blur-sm hover:border-emerald-400/40">
+              <Card
+                key={index}
+                className="hover:shadow-xl transition-shadow duration-300 bg-[#222232]/80 border-[#ff6ac1]/40 hover:border-[#fff900]/80 backdrop-blur-md"
+              >
                 <CardHeader>
                   <div className="flex items-center mb-3">
-                    <div className="p-2 bg-gradient-to-r from-emerald-500/20 to-violet-500/20 rounded-lg mr-3 border border-emerald-500/30">
+                    <div className="p-2 bg-gradient-to-r from-[#ff6ac1] to-[#19e6e6] rounded-lg mr-3 border border-[#fff900]/30">
                       {project.icon}
                     </div>
-                    <CardTitle className="text-xl font-rajdhani text-emerald-300">{project.title}</CardTitle>
+                    <CardTitle className="text-xl font-orbitron text-[#43e97b]">{project.title}</CardTitle>
                   </div>
-                  <CardDescription className="text-slate-300 leading-relaxed font-exo">
+                  <CardDescription className="text-[#c3fdff] leading-relaxed font-exo">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-violet-300 mb-2 font-rajdhani">Technologies Used:</h4>
+                      <h4 className="font-semibold text-[#0ff0fc] mb-2 font-rajdhani">
+                        Technologies Used:
+                      </h4>
                       <div className="flex flex-wrap gap-1">
                         {project.technologies.map((tech, techIndex) => (
-                          <Badge key={techIndex} variant="secondary" className="text-xs font-exo bg-emerald-500/20 text-emerald-300 border-emerald-500/30">
+                          <Badge
+                            key={techIndex}
+                            variant="secondary"
+                            className="text-xs font-exo bg-[#00dfd8]/40 text-[#fff900] border-[#19e6e6]/40"
+                          >
                             {tech}
                           </Badge>
                         ))}
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-violet-300 mb-1 font-rajdhani">Key Challenge:</h4>
-                      <p className="text-sm text-slate-300 font-exo">{project.challenges}</p>
+                      <h4 className="font-semibold text-[#ff6ac1] mb-1 font-rajdhani">
+                        Key Challenge:
+                      </h4>
+                      <p className="text-sm text-[#e0c3fc] font-exo">{project.challenges}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-violet-300 mb-1 font-rajdhani">Outcome:</h4>
-                      <p className="text-sm text-slate-300 font-exo">{project.outcomes}</p>
+                      <h4 className="font-semibold text-[#43e97b] mb-1 font-rajdhani">
+                        Outcome:
+                      </h4>
+                      <p className="text-sm text-[#c3fdff] font-exo">{project.outcomes}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -252,39 +284,47 @@ const Index = () => {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-20 px-6">
+      <section
+        className="py-20 px-6 bg-gradient-to-br from-[#181a3c]/95 via-[#43e97b]/20 to-[#2b0047]/70"
+      >
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-violet-400">Certifications & Learning</h2>
-          <Card className="bg-gradient-to-r from-emerald-900/30 to-violet-900/30 border-emerald-500/20 backdrop-blur-sm">
+          <h2 className="text-3xl font-bold text-center mb-12 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-[#43e97b] via-[#fff900] to-[#ff6ac1] drop-shadow-lg">
+            Certifications &amp; Learning
+          </h2>
+          <Card className="bg-gradient-to-r from-[#1a223f]/90 to-[#2b0047]/80 border-[#fff900]/20 backdrop-blur-xl">
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 font-rajdhani text-emerald-300">Current Certifications</h3>
+                  <h3 className="text-xl font-semibold mb-4 font-rajdhani text-[#0ff0fc]">
+                    Current Certifications
+                  </h3>
                   <ul className="space-y-3">
                     {certifications.map((cert, index) => (
-                      <li key={index} className="flex items-center text-slate-300 font-exo">
-                        <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                      <li key={index} className="flex items-center text-[#c3fdff] font-exo">
+                        <span className="w-2 h-2 bg-[#fff900] rounded-full mr-3"></span>
                         {cert}
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 font-rajdhani text-emerald-300">Platforms & Tools</h3>
+                  <h3 className="text-xl font-semibold mb-4 font-rajdhani text-[#43e97b]">
+                    Platforms &amp; Tools
+                  </h3>
                   <div className="grid grid-cols-2 gap-3">
-                    <Badge className="justify-center py-2 bg-orange-500/20 text-orange-300 hover:bg-orange-500/30 border-orange-500/30 font-exo">
+                    <Badge className="justify-center py-2 bg-[#ff6ac1]/30 text-[#fff900] hover:bg-[#e0c3fc]/30 border-[#43e97b]/30 font-exo">
                       <Database className="w-4 h-4 mr-1" />
                       AWS
                     </Badge>
-                    <Badge className="justify-center py-2 bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 border-blue-500/30 font-exo">
+                    <Badge className="justify-center py-2 bg-[#19e6e6]/30 text-[#0ff0fc] hover:bg-[#18f005]/30 border-[#0ff0fc]/30 font-exo">
                       <Cloud className="w-4 h-4 mr-1" />
                       Azure
                     </Badge>
-                    <Badge className="justify-center py-2 bg-violet-500/20 text-violet-300 hover:bg-violet-500/30 border-violet-500/30 font-exo">
+                    <Badge className="justify-center py-2 bg-[#43e97b]/30 text-[#c3fdff] hover:bg-[#1afbf0]/30 border-[#fff900]/30 font-exo">
                       <Server className="w-4 h-4 mr-1" />
                       Linux
                     </Badge>
-                    <Badge className="justify-center py-2 bg-green-500/20 text-green-300 hover:bg-green-500/30 border-green-500/30 font-exo">
+                    <Badge className="justify-center py-2 bg-[#00dfd8]/30 text-[#ff6ac1] hover:bg-[#fff900]/20 border-[#ff6ac1]/30 font-exo">
                       <Settings className="w-4 h-4 mr-1" />
                       Docker
                     </Badge>
